@@ -1,0 +1,1114 @@
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/OpenSans-Light-webfont.eot');
+    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light-webfont.woff2') format('woff2'), url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'apecregular';
+    src: url('../fonts/APEC__-webfont.eot');
+    src: url('../fonts/APEC__-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/APEC__-webfont.woff2') format('woff2'), url('../fonts/APEC__-webfont.woff') format('woff'), url('../fonts/APEC__-webfont.ttf') format('truetype'), url('../fonts/APEC__-webfont.svg#apecregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    font-size: 13px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'open_sanslight';
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/*-----------------------*/
+/* ------ HEADER ------- */
+/*-----------------------*/
+
+.navbar {
+    min-height: 40px !important;
+}
+
+.navbar-toggle {
+    background-color: #004683 !important;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background: none;
+}
+
+.navbar-nav a {
+    color: #fff;
+}
+
+.navbar-inverse {
+    position: relative;
+    background-color: #f1f1f1;
+    border-bottom: none;
+    margin-bottom: 3px;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #fff;
+    }
+
+.navbar-brand {
+    font-family: 'apecregular';
+    color: #004683 !important;
+    font-size: 26px;
+    padding: 0px 15px;
+    line-height: 40px;
+}
+
+.navbar-collapse {
+    position: relative;
+    background: #004683;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container.top {
+    height: 40px;
+}
+
+.navbar-header {
+    height: 40px;
+}
+
+.wrapper-nav {
+    background: #004683;
+}
+
+/**/
+
+.redes {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+    .redes li {
+        float: left;
+        list-style: none;
+        padding: 0px 10px;
+        line-height: 40px;
+        border-left: 1px solid #e2e2e2;
+    }
+
+@media(max-width:767px) {
+    .navbar-collapse;
+
+{
+    margin-top: 17px;
+}
+
+.wrapper-nav {
+    background: none !important;
+}
+
+.barra-usuario {
+    position: relative !important;
+    top: auto;
+    z-index: 9999;
+    height: 50px;
+    display: none;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background: #cc0000 !important;
+}
+
+.redes {
+    position: relative;
+    margin: 0 -15px;
+    position: relative;
+    top: auto;
+    right: auto;
+    border-bottom: 1px solid #036;
+    background-color: #013e74;
+}
+
+    .redes ul {
+        width: 60%;
+        height: 44px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .redes li {
+        width: 25%;
+        border: none;
+        text-align: center;
+    }
+
+.nav.navbar-nav {
+    margin-top: 0px;
+    border-top: 1px solid #1A5C9F;
+}
+
+}
+
+/*-- Área Banner (portada : slider) --*/
+
+.areaBanner#portada {
+    background: #e2e2e2;
+    display: none;
+}
+
+.carousel-control {
+    opacity: 1;
+    width: 7%;
+}
+
+.glyphicon-menu-left, .glyphicon-menu-right {
+    color: #cc0000;
+    font-size: 26px;
+    top: 43% !important;
+    left: 35%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background: none;
+}
+
+.carousel-indicators, .carousel-indicators ol {
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.carousel-caption {
+    padding-bottom: 0;
+}
+
+@media(max-width:767px) {
+    .carousel.container;
+
+{
+    padding: 0;
+}
+
+.glyphicon-menu-left, .glyphicon-menu-right {
+    font-size: 15px;
+}
+
+.carousel-caption {
+    display: none;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background: black;
+}
+
+}
+
+@media(max-width:550px) {
+    .glyphicon-menu-left, .glyphicon-menu-right;
+
+{
+    left: 10%;
+}
+
+}
+
+/*-- Área Banner (interno) --*/
+
+.areaBanner#interno {
+    height: 92px;
+    background: #ededed;
+    color: #004683;
+}
+
+    .areaBanner#interno .container {
+        height: 92px;
+        background: url(../img/banner.png) no-repeat right center;
+    }
+
+    .areaBanner#interno h1 {
+        display: inline-block;
+        font-size: 30px;
+        background: url(../img/general/bgTituloHeader.png);
+        padding: 5px 10px 5px 0;
+        border-radius: 10px;
+    }
+
+@media (max-width : 767px) {
+    .areaBanner#interno h1 {
+        padding-left: 10px;
+    }
+}
+
+/*---------------------*/
+/*------- CUERPO ------*/
+/*---------------------*/
+
+.cuerpo.portada > .row {
+    padding-top: 35px;
+}
+
+.cuerpo.portada h1 {
+    font-size: 22px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+.cuerpo.portada p, .cuerpo.portada ul {
+    font-size: 12px;
+}
+
+.btn.btn-default {
+    background-color: #bf960e;
+    border: none;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 0;
+    padding: 3px 15px;
+}
+
+.cuerpo.portada ul {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cuerpo.portada li {
+    background: url(../img/bullet.png) no-repeat 0 5px;
+    padding-left: 10px;
+    line-height: 15px;
+}
+
+@media (max-width:767px) {
+    .cuerpo.portada {
+        text-align: center;
+    }
+
+        .cuerpo.portada ul {
+            text-align: left;
+        }
+
+        .cuerpo.portada .col-sm-4 {
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+    .btn.btn-default {
+        padding: 5px 15px;
+    }
+}
+
+/*-----------
+  Contenido
+-----------*/
+
+.cuerpo.interno {
+    padding-top: 25px;
+}
+
+.interno .contenido {
+    margin-bottom: 20px;
+}
+
+.interno ul.bullet-circ {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .interno ul.bullet-circ li {
+        padding: 0 0 0 13px;
+        margin-bottom: 7px;
+        background: url(../img/bullet-circular.png) no-repeat left 8px;
+    }
+
+/* seccion : Herramentas */
+.interno .caja {
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+}
+
+    .interno .caja .col-sm-5 {
+        border-right: 1px solid #ddd;
+    }
+
+        .interno .caja .col-sm-5 + .col-sm-5 {
+            border-right: none;
+        }
+
+    .interno .caja h2 {
+        margin-top: 0;
+    }
+
+@media (max-width : 767px) {
+    .interno .caja .col-sm-5 {
+        border: none;
+    }
+
+    .interno .caja h2 {
+        margin: 20px 0;
+    }
+}
+
+/*----------- 
+   colDer 
+-----------*/
+
+.colDer {
+    background-color: #fff !important;
+    padding: 25px !important;
+}
+
+    .colDer h2:first-child {
+        margin-top: 0;
+    }
+
+    .colDer h2 {
+        font-size: 21px;
+        padding-bottom: 12px;
+        background: url(../img/subrTitCol.png) no-repeat bottom left;
+    }
+
+    .colDer ul {
+        padding: 0;
+        margin-bottom: 25px;
+        list-style: none;
+    }
+
+    .colDer li {
+        line-height: 23px;
+        background: url(../img/bullet.png) no-repeat left center;
+        padding-left: 10px;
+    }
+
+/*-----------------------*/
+/* -------- PIE -------- */
+/*-----------------------*/
+
+.pie {
+    margin-top: px;
+    padding-bottom: 20px;
+    background: #004683;
+    color: #d5d5d5;
+    font-size: 12px;
+}
+
+.banda {
+    height: 50px;
+    background-color: #ededed;
+}
+
+    .banda ul {
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+
+        .banda ul li {
+            display: inline-block;
+            width: 19%;
+            line-height: 45px;
+            padding-left: 35px;
+            background-position: center left;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+    .banda a {
+        color: #8a8989 !important;
+        font-size: 16px;
+        font-family: 'open_sanslight';
+    }
+
+    .banda img {
+        margin-right: 10px;
+    }
+
+.row.links {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.pie h2 {
+    font-size: 20px;
+}
+
+.pie a {
+    color: #d5d5d5;
+}
+
+.pie ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 90%;
+    max-width: 314px;
+    margin-top: 50px;
+    float: right;
+}
+
+.tira-inf {
+    border-top: 1px solid #245a8a;
+    margin: 30px 60px 0 60px;
+    padding: 10px;
+    text-align: center;
+    color: #5f8eb8;
+    font-size: 11px;
+}
+
+    .tira-inf ul li {
+        display: inline;
+        margin: 0 2px;
+    }
+
+@media (max-width:992px) {
+    .banda {
+        height: auto;
+    }
+
+        .banda ul li {
+            display: block;
+            width: auto;
+        }
+
+    .pie {
+        text-align: center;
+    }
+
+        .pie .logo {
+            float: none;
+        }
+}
+
+
+
+.texboxdatos {
+    background: transparent !important;
+    color: black !important;
+    border-color: gray !important;
+}
+
+.texboxdatosMod {
+    background: transparent !important;
+    color: red !important;
+    border-color: red !important;
+}
+
+
+/* tabla con tabs*/
+
+.tablaTab {
+    background: #fff;
+}
+
+
+.formulario {
+    padding: 0 0px;
+    margin: 30px 0;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    max-width: 60%;
+}
+
+
+.formularioGrid {
+    padding: 0 0px;
+    margin: 30px 0;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    max-width: 100%;
+}
+
+    .formularioGrid th {
+        background: #0072c6 url(../img/bg_th_grid.png) repeat-x top;
+        height: 36px;
+        color: #fff;
+        text-align: left;
+        padding: 0 7px;
+    }
+
+.tablaTab .well-sm {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.tablaTab .well {
+    min-height: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.tablaTab td, .tablaTab th {
+    border-top: none !important;
+}
+
+/** agregado por mohame*/
+
+.Initial {
+    display: block;
+    padding: 4px 18px 4px 18px;
+    float: left;
+    color: white !important;
+    background-color: #004683 !important;
+    border-style: none !important;
+    font-weight: bold !important;
+}
+
+    .Initial:hover {
+        color: #004683 !important;
+        background-color: white !important;
+    }
+
+.Clicked {
+    float: left;
+    display: block;
+    padding: 4px 18px 4px 18px;
+    /*color: Black;*/
+    font-weight: bold;
+    background-color: white !important;
+    color: #004683 !important;
+}
+
+
+/*****estilo para los botones*/
+.botonsolicitud {
+    float: right !important;
+    padding: 5px !important;
+    margin: 10px !important;
+    background-color: #004683 !important;
+    border-style: None !important;
+    font-weight: bold !important;
+    margin-left: 530px !important;
+    width: 15% !important;
+    color: white !important;
+}
+
+/* nuevo*/
+.tablaTab .well {
+    min-height: 20px;
+    padding: 1px;
+    margin-bottom: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.tablaTab td, .tablaTab th {
+    border-top: none !important;
+    padding: 0 0 0 10px !important;
+}
+
+
+.tablaTab {
+    background: #fff;
+    padding: 5px;
+}
+
+.formulario > .panel-heading {
+    background-color: #004683 !important;
+}
+
+.formulario > .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover, .formluario > .nav-tabs > li.active > a:focus {
+    border-radius: 7px 7px 0 0 !important;
+    color: #004683 !important;
+    background: #fff !important;
+}
+
+.nav > li > a {
+    color: #fff;
+}
+
+.borderformato {
+    border-color: #cc0000 !important;
+}
+
+.bordernormal {
+    border-style: None !important;
+}
+
+table {
+    background-color: transparent;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+        padding: 4px !important;
+        line-height: 15px;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+
+    .table > thead > tr > th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .table > caption + thead > tr:first-child > th,
+    .table > colgroup + thead > tr:first-child > th,
+    .table > thead:first-child > tr:first-child > th,
+    .table > caption + thead > tr:first-child > td,
+    .table > colgroup + thead > tr:first-child > td,
+    .table > thead:first-child > tr:first-child > td {
+        border-top: 0;
+    }
+
+    .table > tbody + tbody {
+        border-top: 2px solid #ddd;
+    }
+
+    .table .table {
+        background-color: #fff;
+    }
+
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+    padding: 5px;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+    .table-bordered > thead > tr > th,
+    .table-bordered > tbody > tr > th,
+    .table-bordered > tfoot > tr > th,
+    .table-bordered > thead > tr > td,
+    .table-bordered > tbody > tr > td,
+    .table-bordered > tfoot > tr > td {
+        border: 1px solid #ddd;
+    }
+
+    .table-bordered > thead > tr > th,
+    .table-bordered > thead > tr > td {
+        border-bottom-width: 2px;
+    }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #f5f5f5;
+}
+
+table col[class*="col-"] {
+    position: static;
+    display: table-column;
+    float: none;
+}
+
+table td[class*="col-"],
+table th[class*="col-"] {
+    position: static;
+    display: table-cell;
+    float: none;
+}
+
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
+    background-color: #f5f5f5;
+}
+
+.table-hover > tbody > tr > td.active:hover,
+.table-hover > tbody > tr > th.active:hover,
+.table-hover > tbody > tr.active:hover > td,
+.table-hover > tbody > tr:hover > .active,
+.table-hover > tbody > tr.active:hover > th {
+    background-color: #e8e8e8;
+}
+
+.table > thead > tr > td.success,
+.table > tbody > tr > td.success,
+.table > tfoot > tr > td.success,
+.table > thead > tr > th.success,
+.table > tbody > tr > th.success,
+.table > tfoot > tr > th.success,
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td,
+.table > thead > tr.success > th,
+.table > tbody > tr.success > th,
+.table > tfoot > tr.success > th {
+    background-color: #dff0d8;
+}
+
+.table-hover > tbody > tr > td.success:hover,
+.table-hover > tbody > tr > th.success:hover,
+.table-hover > tbody > tr.success:hover > td,
+.table-hover > tbody > tr:hover > .success,
+.table-hover > tbody > tr.success:hover > th {
+    background-color: #d0e9c6;
+}
+
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th {
+    background-color: #d9edf7;
+}
+
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+    background-color: #c4e3f3;
+}
+
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning,
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning,
+.table > thead > tr.warning > td,
+.table > tbody > tr.warning > td,
+.table > tfoot > tr.warning > td,
+.table > thead > tr.warning > th,
+.table > tbody > tr.warning > th,
+.table > tfoot > tr.warning > th {
+    background-color: #fcf8e3;
+}
+
+.table-hover > tbody > tr > td.warning:hover,
+.table-hover > tbody > tr > th.warning:hover,
+.table-hover > tbody > tr.warning:hover > td,
+.table-hover > tbody > tr:hover > .warning,
+.table-hover > tbody > tr.warning:hover > th {
+    background-color: #faf2cc;
+}
+
+.table > thead > tr > td.danger,
+.table > tbody > tr > td.danger,
+.table > tfoot > tr > td.danger,
+.table > thead > tr > th.danger,
+.table > tbody > tr > th.danger,
+.table > tfoot > tr > th.danger,
+.table > thead > tr.danger > td,
+.table > tbody > tr.danger > td,
+.table > tfoot > tr.danger > td,
+.table > thead > tr.danger > th,
+.table > tbody > tr.danger > th,
+.table > tfoot > tr.danger > th {
+    background-color: #f2dede;
+}
+
+.table-hover > tbody > tr > td.danger:hover,
+.table-hover > tbody > tr > th.danger:hover,
+.table-hover > tbody > tr.danger:hover > td,
+.table-hover > tbody > tr:hover > .danger,
+.table-hover > tbody > tr.danger:hover > th {
+    background-color: #ebcccc;
+}
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+
+        .table-responsive > .table {
+            margin-bottom: 0;
+        }
+
+            .table-responsive > .table > thead > tr > th,
+            .table-responsive > .table > tbody > tr > th,
+            .table-responsive > .table > tfoot > tr > th,
+            .table-responsive > .table > thead > tr > td,
+            .table-responsive > .table > tbody > tr > td,
+            .table-responsive > .table > tfoot > tr > td {
+                white-space: nowrap;
+            }
+
+        .table-responsive > .table-bordered {
+            border: 0;
+        }
+
+            .table-responsive > .table-bordered > thead > tr > th:first-child,
+            .table-responsive > .table-bordered > tbody > tr > th:first-child,
+            .table-responsive > .table-bordered > tfoot > tr > th:first-child,
+            .table-responsive > .table-bordered > thead > tr > td:first-child,
+            .table-responsive > .table-bordered > tbody > tr > td:first-child,
+            .table-responsive > .table-bordered > tfoot > tr > td:first-child {
+                border-left: 0;
+            }
+
+            .table-responsive > .table-bordered > thead > tr > th:last-child,
+            .table-responsive > .table-bordered > tbody > tr > th:last-child,
+            .table-responsive > .table-bordered > tfoot > tr > th:last-child,
+            .table-responsive > .table-bordered > thead > tr > td:last-child,
+            .table-responsive > .table-bordered > tbody > tr > td:last-child,
+            .table-responsive > .table-bordered > tfoot > tr > td:last-child {
+                border-right: 0;
+            }
+
+            .table-responsive > .table-bordered > tbody > tr:last-child > th,
+            .table-responsive > .table-bordered > tfoot > tr:last-child > th,
+            .table-responsive > .table-bordered > tbody > tr:last-child > td,
+            .table-responsive > .table-bordered > tfoot > tr:last-child > td {
+                border-bottom: 0;
+            }
+}
+
+
+.tabladatos, .tablaencargado {
+    width: 100%;
+    height: 100%;
+    background-color: #fff!important;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.tablaAprobacion .table > thead > tr > th {
+    background-color: #004683 !important;
+    color: #fff !important;
+}
+
+.tablaAprobacion .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #DCEDFC;
+}
+
+.tablaAprobacion {
+    margin: 25px 0 25px;
+    border: 1px solid #ccc;
+    padding: 0px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+    .tablaAprobacion input[type=button] {
+        font-size: 13px;
+        font-family: Arial;
+    }
+
+#table th, #table td, .tablaNotif td {
+    text-align: left;
+}
+
+.cheques {
+    border: 1px solid #CCC;
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.th .text-right {
+    text-align: right;
+}
+
+
+.cheques h1 {
+    padding: 0;
+    background: #004683 !important;
+    padding: 5px !important;
+    margin: 0px !important;
+    color: #fff !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 18px !important;
+    padding-left: 10px !important;
+}
+
+.input-group-addon {
+    padding: 3px 12px !important;
+}
+
+.cheques .input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.cheques .btn, .tablaAprobacion .btn {
+    display: inline-block !important;
+    padding: 6px 12px !important;
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    line-height: 1.42857143 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    background-image: none !important;
+    border: 1px solid transparent !important;
+    border-radius: 4px !important;
+}
+
+.cheques .btn-default {
+    color: #333 !important;
+    background-color: #fff !important;
+    border-color: #ccc !important;
+}
+
+.tablaAprobacion .btn-default {
+    color: #FFF !important;
+    float: right !important;
+    margin: 10px !important;
+    background-color: #004683 !important;
+    border-color: #ccc !important;
+}
+
+.cheques .parrafo {
+    background: url(../img/img.png) no-repeat;
+    width: 614px;
+    height: 234px;
+    padding: 20px;
+}
+
+    .cheques .parrafo p {
+        padding: 20px;
+        font-size: 16px;
+        color: #333;
+        background: url(../img/transparent5.PNG);
+    }
+
+.chequeimg {
+    max-height: 125px !important;
+}
+
+.cheques .btn-default:hover, .cheques .btn-default:focus, .cheques .btn-default.focus, .cheques .btn-default:active, .cheques .btn-default.active, .cheques .open > .dropdown-toggle.btn-default, .tablaAprobacion .btn:hover {
+    color: #333 !important;
+    background-color: #e6e6e6 !important;
+    border-color: #adadad !important;
+}
+
+.cheques .btnBuscar:hover {
+    background-color: #286090 !important;
+    color: #fff;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .cheques .invisibles {
+        visibility: hidden !important;
+    }
+}
+
+.input-group-addon {
+    padding: 3px 12px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .cheques .invisibles {
+        visibility: hidden !important;
+    }
+}
+
+.dataTables_filter, .dataTables_length, .dataTables_info {
+    margin: 5px;
+}
+
+    .dataTables_filter input {
+        border: none;
+        background:#ddd;
+    }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    margin-top:7px;
+    margin-bottom:7px;
+    padding:1px 5px;
+}
+table.dataTable.no-footer {
+    border-color:#8a8989;
+}
