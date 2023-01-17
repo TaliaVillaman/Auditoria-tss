@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: AuditoriaTSS, Configuration: Debug Any CPU ------
+1>  AuditoriaTSS -> C:\Users\Admin\Desktop\proyecto carga rachivo ars humanos\Auditoria TSS\AuditoriaTSS\bin\AuditoriaTSS.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

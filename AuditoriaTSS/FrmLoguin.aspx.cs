@@ -3,37 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Data.OleDb;
 using System.Web.UI.WebControls;
 using System.Web.Services;
+using System.DirectoryServices;
 using System.Data.SqlClient;
+
 using System.Data;
 
 namespace AuditoriaTSS
 {
     public partial class FrmLoguin : System.Web.UI.Page
     {
-
-        [System.Web.Services.WebMethod]
+       
+        [WebMethod]
         public static String validausuario(string user, string pass)
         {
+          
             string resultado = "";
+            DataTable dt = new DataTable();
+            wsServices.AuditoriaWs ws = new wsServices.AuditoriaWs();
+            ClsConsulta clcon = new ClsConsulta();
 
-            using (SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["ConStringPrueba"].ConnectionString))
+            string Server = "ARSHDCHQ01";
+            string ruta = "LDAP://" + Server + "/DC=HUMANO,DC=local";
+            System.DirectoryServices.DirectoryEntry raiz = new System.DirectoryServices.DirectoryEntry();
+            raiz.Path = ruta;
+            raiz.AuthenticationType = AuthenticationTypes.Secure;
+            raiz.Username = user;
+            raiz.Password = pass;
+
+            string filtro = "sAMAccountName";
+            string strSearch = filtro + "=" + user;
+            DirectorySearcher dsSystem = new DirectorySearcher(raiz, strSearch);
+            dsSystem.SearchScope = SearchScope.Subtree;
+            try
             {
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = "Select  idrow from  audit_usuarios where usuario='" + user + "' and pass='" + pass + "'";
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandTimeout = 1000000;
-                da.SelectCommand = cmd;
-                da.Fill(dt);
+                //SearchResult srSystem = dsSystem.FindOne();
+                string qrystring = "Select  PERFIL from audit_usuarios where usuario='" + user + "'  and estatus=0";
+
+                dt = clcon.Getusuario(qrystring);
                 if (dt.Rows.Count > 0)
                 {
-                    resultado = dt.Rows[0]["idrow"].ToString();
+                    resultado = dt.Rows[0]["PERFIL"].ToString();
                 }
+                resultado = "0";
+            }
+            catch (Exception error)
+            {
+                resultado = "";
             }
 
             return resultado;
@@ -43,7 +60,13 @@ namespace AuditoriaTSS
         {
             if (!IsPostBack)
             {
+
+                ClsConsulta var = new ClsConsulta();
+                String id = var.GetUserName();
+
+                txtusuario.Value = id;
             }
         }
+
     }
 }

@@ -1151,11 +1151,16 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #eee;
+
+    margin-top: -1px !important;
+  margin-bottom: 20px !important;
+  border: 0 !important;
+
+  border-top: 15px solid #00bbed !important;
+
 }
+
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -4866,7 +4871,8 @@ a.badge:focus {
   font-size: 21px;
   font-weight: 200;
 }
-.jumbotron > hr {
+.jumbotron > 
+
   border-top-color: #d5d5d5;
 }
 .container .jumbotron,

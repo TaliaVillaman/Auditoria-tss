@@ -12,14 +12,23 @@ using System.Data;
 namespace AuditoriaTSS
 {
     public partial class frmMenu : System.Web.UI.Page
-    {
+    {  
+        private ClsConexion cscon;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                string var = (string)Session["valor"];
+
                 String id = Request.QueryString["id"];
-                txt_usuario.Text = NombreUsuario(id);
-                txtfecha.Text = DateTime.Now.ToString("dd-MM-yyyy");
+                if (var != null)
+                {
+                    id = var;
+                }
+                else
+                { 
+                Session["valor"] = id;
+               }
                 PermisosMenu(id);
             }
         }
@@ -27,72 +36,36 @@ namespace AuditoriaTSS
         {
             int permiso = idperfil(id);
 
-            if (menuaudit.Items.Count > 0)
+
+            switch (permiso)
             {
-                foreach (MenuItem item in menuaudit.Items)
-                {
-
-                    switch (permiso)
-                    {
-                        case 0:
-                            break;
-                        case 1:
-                            if (item.Text == "Admnistracion de Usuarios")
-                            {
-                                item.Enabled = false;
-                            };
-                            break;
-                        case 2:
-                            if (item.Text == "Admnistracion de Usuarios")
-                            {
-                                item.Enabled = false;
-                            };
-
-                            if (item.Text == "Procesos")
-                            {
-                                item.Enabled = false;
-                            };
-                            break;
-
-                    }
-                }
+                case 0:
+                    break;
+                case 1:
+                    adm.Visible = false;
+                    break;
+                case 2:
+                    adm.Visible = false;
+                    proces.Visible = false;
+                    break;
 
             }
-
-
         }
-        private void DisplayChildMenuText(MenuItem item)
-        {
 
 
-            foreach (MenuItem childItem in item.ChildItems)
-            {
 
-                //string a = item.Text;
 
-                if (item.Text == "Admnistracion de Usuarios")
-                {
-                    item.Enabled = false;
-                }
-
-            }
-
-        }
+     
         private int idperfil(string id)
         {
 
-            using (SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["ConStringPrueba"].ConnectionString))
-            {
-                int resultado = -1;
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = "Select  perfil from  audit_usuarios where idrow='" + id + "'";
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandTimeout = 1000000;
-                da.SelectCommand = cmd;
-                da.Fill(dt);
+            DataTable dt = new DataTable();
+            int resultado = -1;
+            string strconsulta = "Select  perfil from  audit_usuarios where perfil='" + id + "'";
+            cscon = new ClsConexion();
+
+            dt = cscon.GetDatatableSql(strconsulta);
+
                 if (dt.Rows.Count > 0)
                 {
                     resultado = Convert.ToInt32(dt.Rows[0]["perfil"].ToString());
@@ -100,27 +73,7 @@ namespace AuditoriaTSS
 
                 return resultado;
             }
-        }
-        private string NombreUsuario(string id)
-        {
-            string resultado = "";
-            using (SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["ConStringPrueba"].ConnectionString))
-            {
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = "Select  usuario from  audit_usuarios where idrow='" + id + "'";
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandTimeout = 1000000;
-                da.SelectCommand = cmd;
-                da.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    resultado = dt.Rows[0]["usuario"].ToString();
-                }
-                return resultado;
-            }
-        }
+     
+   
     }
 }

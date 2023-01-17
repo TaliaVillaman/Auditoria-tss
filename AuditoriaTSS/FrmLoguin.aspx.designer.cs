@@ -11,5 +11,23 @@ namespace AuditoriaTSS {
     
     
     public partial class FrmLoguin {
+        
+        /// <summary>
+        /// txtusuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtusuario;
+        
+        /// <summary>
+        /// txtcontrasena control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtcontrasena;
     }
 }

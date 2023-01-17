@@ -1,0 +1,305 @@
+﻿
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+body {background:#FEFEFE;}
+ 
+.menu_bar {
+	display:none;
+}
+ 
+
+ .container {
+    position: relative !important;
+
+    height: 675px !important;
+}
+  .portada {
+
+
+   /* height: 664px !important;*/
+    background: url('../image/Home Humano.png') no-repeat fixed center !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    width: 100% !important ;
+  
+}
+header {
+	width: 100%;
+}
+ 
+header nav {
+	background:#0063ab ;
+	z-index:1000;
+	max-width: 1000px;
+	width:95%;
+
+	margin:20px auto;
+}
+ 
+header nav ul {
+	list-style:none;
+}
+ 
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+ 
+header nav ul li:hover {
+	background:#00bbed;
+}
+ 
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+ 
+header nav ul li a span {
+	margin-right:10px;
+}
+ 
+header nav ul li:hover .children {
+	display:block;
+}
+ 
+header nav ul li .children {
+	display: none;
+	background:#023859;
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+ 
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+ 
+header nav ul li .children li a {
+	display: block;
+}
+ 
+header nav ul li .children li a span {
+	float: right !important;
+	position: relative !important;
+	top:3px !important;
+	margin-right:0 !important;
+	margin-left:10px !important;
+}
+ 
+header nav ul li .caret {
+	position: relative !important;
+	top:3px !important;
+	margin-left:10px !important;
+	margin-right:0px !important;
+}
+ 
+	body {
+		padding-top:80px !important;
+        height:100% !important;
+	}
+	.menu_bar {
+		display:block !important;
+		width:100% !important;
+		position: fixed !important;
+		top:0 !important;
+		background:#0063ab !important;
+
+	}
+    	.menu_bar_2 {
+		display:block !important;
+		width:100% !important;
+		top:0 !important;
+		background:#00bbed !important;
+        height:15px !important;
+	}
+
+
+.footer_bar {
+
+             position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background:#0063ab !important;
+	}
+.footer_Masivo {
+
+             position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background:#0063ab !important;
+
+	}
+
+.footer_cliente {
+
+             position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background:#0063ab !important;
+	}
+
+
+.footer_menu {
+
+     position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background:#0063ab !important;
+
+	}
+.footer_loguin {
+
+             position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background:#0063ab !important;
+	}
+.footer_reporte {
+
+             position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background:#0063ab !important;
+	}
+
+.footer_usuario{
+             position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background:#0063ab !important;
+	}
+
+        .menu_bar .bt-menu {
+            display: block !important;
+            padding: 20px !important;
+            color: #fff !important;
+            overflow: hidden !important;
+            font-size: 25px !important;
+            font-weight: bold !important;
+            text-decoration: none !important;
+
+
+        }
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+ 
+	header nav {
+		/*width: 300px;*/
+      width: 223px;
+		height: calc(100% - 80px);
+		position: fixed;
+		/*right:100%;*/
+		margin: 0;
+		/*overflow: scroll;*/
+	}
+ 
+	header nav ul li {
+		display: block !important;
+		border-bottom:1px solid rgba(255,255,255,.5) !important;
+	}
+ 
+	header nav ul li a {
+		display: block ;
+	}
+ 
+	header nav ul li:hover .children {
+		display: none;
+	}
+ 
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+ 
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+ 
+	header nav ul li .caret {
+		float: right;
+	}
+
+      .mGrid td {  
+        padding: 2px !important;  
+        border: solid 1px #c1c1c1 !important;  
+        color: #717171 !important;  
+        width:50px !important;
+    }  
+       .mGrid th {  
+        padding: 4px 2px !important;  
+        color: #fff !important;  
+        background: #424242 url(grd_head.png) repeat-x top;  
+        border-left: solid 1px #525252 !important;  
+        font-size: 0.9em;  
+        width:50px !important;
+    }  
+      .mGrid .alt {  
+        background: #fcfcfc url(grd_alt.png) repeat-x top !important;  
+    }  
+      .mGrid .pgr {  
+        background: #424242 url(grd_pgr.png) repeat-x top !important;  
+    }  
+      .mGrid .pgr table {  
+            margin: 5px 0 !important;  
+        }  
+      .mGrid .pgr td {  
+            border-width: 0 !important;  
+            padding: 0 6px !important;  
+            border-left: solid 1px #666 !important;  
+            font-weight: bold !important;  
+            color: #fff !important;  
+            line-height: 12px !important;  
+        }  
+       .mGrid .pgr a {  
+            color: #666 !important;  
+            text-decoration: none !important;  
+        }  
+       .mGrid .pgr a:hover {  
+                color: #000 !important;  
+                text-decoration: none !important;  
+            } 
+      .login-form {
+		width: 340px;
+    	margin: 50px auto;
+	}
+    .login-form form {
+    	margin-bottom: 15px;
+        background: #f7f7f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+    .login-form h2 {
+        margin: 0 0 15px;
+    }
+    .form-control, .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+    .btn {        
+        font-size: 15px;
+        font-weight: bold;
+        background:#00e3d1;
+        text-align:center;
+    }  
+      

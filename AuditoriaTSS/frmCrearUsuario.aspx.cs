@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Data.SqlClient;
 using System.Web.Services;
 using System.Web.UI.WebControls;
-
+using System.DirectoryServices;
 
 namespace AuditoriaTSS
 {
@@ -17,24 +17,76 @@ namespace AuditoriaTSS
         {
             if (!IsPostBack)
             {
+                String id = (string)Session["valor"];
+                PermisosMenu(id);
             }
         }
-
-        [WebMethod(EnableSession = true)]
-        public static string InsertarRegistro(string nombre, string empresa, string contacto, string correo, string idperfi,string usuario,string pass)
+        private void PermisosMenu(string id)
         {
-            using (SqlConnection cn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["ConStringPrueba"].ConnectionString))
-            {   SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn;
-                cmd.CommandText = "Exec sp_crear_Usuario '" + nombre + "','" +empresa  +"','" +contacto  +"','" + correo +"','"+ usuario  + "','" + pass + "',"+ idperfi+"";
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandTimeout = 1000000;
-                cn.Open();
-                cmd.ExecuteNonQuery();
-                cn.Close();
+            int permiso = idperfil(id);
+
+
+            switch (permiso)
+            {
+                case 0:
+                    break;
+                case 1:
+                    adm.Visible = false;
+                    break;
+                case 2:
+                    adm.Visible = false;
+                    proces.Visible = false;
+                    break;
+
+            }
+        }
+        private int idperfil(string id)
+        {
+
+            DataTable dt = new DataTable();
+            int resultado = -1;
+            string strconsulta = "Select  perfil from  audit_usuarios where perfil='" + id + "'";
+            ClsConexion cscon = new ClsConexion();
+
+            dt = cscon.GetDatatableSql(strconsulta);
+
+            if (dt.Rows.Count > 0)
+            {
+                resultado = Convert.ToInt32(dt.Rows[0]["perfil"].ToString());
             }
 
-            string resultado = "Registro actualizado satisfactoriamente!";
+            return resultado;
+        }
+        [WebMethod]
+        public static string InsertarRegistro(string idperfil,string usuario,string pass)
+        {
+            string resultado = "";
+
+            ClsConexion cscon = new ClsConexion();
+            int result = 0;
+            string strconsulta = "";
+            string Server = "ARSHDCHQ01";
+            string ruta = "LDAP://" + Server + "/DC=HUMANO,DC=local";
+            System.DirectoryServices.DirectoryEntry raiz = new System.DirectoryServices.DirectoryEntry(ruta);
+            raiz.Path = ruta;
+            //raiz.AuthenticationType = AuthenticationTypes.Secure;
+            //raiz.Username = usuario;
+            string filtro = "sAMAccountName";
+            string strSearch = filtro + "=" + usuario;
+            DirectorySearcher dsSystem = new DirectorySearcher(raiz, strSearch);
+            dsSystem.SearchScope = SearchScope.Subtree;
+
+            try
+            {
+               // SearchResult srSystem = dsSystem.FindOne();
+                strconsulta = "SP_CREA_PERFIL_USUARIO '" + usuario + "','" + idperfil + "','" + pass + "' ";
+                result = cscon.Insert_update_Data_Sql(strconsulta);
+                resultado = "Registro Insertados satisfactoriamente!";
+            }
+            catch (Exception error)
+            {
+                resultado = "";
+            }
             return resultado;
         }
     }
